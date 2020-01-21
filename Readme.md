@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Егор Харловский](https://up.htmlacademy.ru/htmlcss/27/user/1233051).
-* Наставник: `Юлия Райхбаум` (https://htmlacademy.ru/profile/juliareichbaum).
+* Наставник: [Юлия Райхбаум](https://htmlacademy.ru/profile/juliareichbaum).
 
 ---
 
