@@ -22,10 +22,10 @@
   </header>
 
   <main>
-    <h1>Дизайн студия Нёрдс</h1>
+    <h1 class="visually-hidden">Дизайн студия Нёрдс</h1>
 
     <section>
-      <h2>Каталог услуг</h2>
+      <h2 class="visually-hidden">Каталог услуг</h2>
       <ul>
         <li>
           <a href="#">
@@ -77,8 +77,21 @@
 
   <section>
     <h2>Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <button>Отправить</button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+    <p>
+    <label for="write-username">Ваше имя:</label>
+    <input type="text" name="name" id="write-username" placeholder="Имя Фамилия">
+    </p>
+    <p>
+    <label for="write-email">Ваш e-mail:<label>
+    <input type="email" name="email" id="write-email" placeholder="email@example.com">
+    </p>
+    <p>
+    <label for="write-text">Текст письма:</label>
+    <input type="text" name="text" id="write-text" placeholder="В свободной форме">
+    </p>
+    </form>
+    <button type="submit">Отправить</button>
   </section>
 
 </body>
