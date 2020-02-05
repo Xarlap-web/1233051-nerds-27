@@ -5,13 +5,11 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #000000;
-
     background-color: #ffffff;
     }
 a {
     text-decoration: none;
 }
-
 
 .main-navigation {
     font-size: 16px;
@@ -21,33 +19,45 @@ a {
     background-color: #eeeeee;
 }
 
-.site-navigation {
+.logo:hover, 
+.logo:focus
+{
+    opacity: 0.8;
+}
+
+.logo:active {
+    opacity: 0.3;
+}
+
+.main-menu {
     list-style: none;
 }
 
-.site-navigation a {
+.main-menu a {
     color: #000000;
 }
 
-.cart-navigation {
-    color: #000000;
-}
-
-.site-navigation a:hover{
+.main-menu a:hover,
+.main-menu a:focus
+{
     color: #fb565a;
 }
 
-.cart-navigation a:hover { /* не срабатывает */
-    color: #fb565a;
+.main-menu a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation a:active {
+.main-item-active {
     color: #000000;
-    opacity: 0.3;
+    text-decoration: underline;
 }
-.site-navigation a:focus {
-    color: #1700e6;
-    opacity: 0.3;
+
+.cart {
+    color: #000000;
+}
+
+.cart:hover {
+    color: #fb565a;
 }
 
 .service-list {
@@ -69,17 +79,72 @@ a {
     font-weight: 400;
     line-height: 24px;
 }
-.servise-order {
-    background-color: #fb565a;
+.button { /* Задал размеры кнопок, а они не увеличились */
     color: #ffffff;
+    width: 160px;
+    height: 50px;
 }
 
-.servise-order:hover {
+.button.red {
+    background-color: #fb565a;
+}
+
+.button.red:hover,
+.button.red:focus {
     background-color: #e74246;
 }
 
-.servise-order:active { /* как сделать opacity: 0.3; для текста ссылки при нажатии? Сейчас делает для всего background-color, а не для текста */
+.button.red:active {
     background-color: #d7373b;
-    color: #ffffff;
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button.green {
+    background-color: #00ca74;
+}
+
+.button.green:hover,
+.button.green:focus {
+    background-color: #00bc6c;
+}
+
+.button.green:active {
+    background-color: #00aa62;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button.yellow {
+    background-color: #efc84a;
+}
+
+.button.yellow:hover,
+.button.yellow:focus {
+    background-color: #eab534;
+}
+
+.button.yellow:active {
+    background-color: #e5a722;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.footer-social {
+    list-style: none;
+}
+
+.footer-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.footer-text {
+    color: #444444;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
 }

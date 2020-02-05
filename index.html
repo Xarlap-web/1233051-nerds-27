@@ -11,16 +11,18 @@
 </head>
 
 <body>
-  <header>
-    <nav class="main-navigation">
+  <header class="main-navigation">
+    <nav>
+      <a class="logo">
       <img src="img/nerds-logo.svg" alt="Логотип проекта Нёрдс" title="Нёрдс" width="160" height="65">
-      <ul class="site-navigation">
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+      </a>
+      <ul class="main-menu">
+        <li class="main-item"><a href="#">Студия</a></li>
+        <li class="main-item"><a href="#">Клиенты</a></li>
+        <li class="main-item"><a href="catalog.html">Магазин</a></li>
+        <li class="main-item"><a href="#">Контакты</a></li>
       </ul>
-      <a class="cart-navigation" href="#">Корзина</a>
+      <a class="cart" href="#">Корзина</a>
     </nav>
   </header>
 
@@ -35,35 +37,35 @@
             <img src="img/service-1.jpg" alt="Веб-сайты" title="Веб-сайты" width="300" height="146">
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a class="servise-order" href="#">Заказать</a>
+          <a class="button red" href="#">Заказать</a>
         </li>
 
         <li class="service-item">
             <img src="img/service-2.jpg" alt="Приложения" title="Приложения" width="300" height="146">
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a class="servise-order" href="#">Заказать</a>
+          <a class="button green" href="#">Заказать</a>
         </li>
 
         <li class="service-item">
             <img src="img/service-3.jpg" alt="Презентации" title="Презентации" width="300" height="146">
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a class="servise-order" href="#">Заказать</a>        
+          <a class="button yellow" href="#">Заказать</a>        
         </li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <ul>
+  <footer class="main-footer">
+    <ul class="footer-social">
       <li><a href="#">ВК</a></li>
       <li><a href="#">FB</a></li>
       <li><a href="#">Instagram</a></li>
     </ul>
     <div>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <p class="footer-title">Давайте дружить, это выгодно!</p>
+      <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
 
