@@ -56,8 +56,14 @@ a {
     color: #000000;
 }
 
-.cart:hover {
+.cart:hover,
+.cart:focus
+{
     color: #fb565a;
+}
+
+.cart:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .service-list {
