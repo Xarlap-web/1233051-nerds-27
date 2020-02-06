@@ -131,6 +131,14 @@ a {
     color: rgba(255, 255, 255, 0.3);
 }
 
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+}
+
 .catalog-item h3,
 .catalog-item a {
     color: inherit;
