@@ -21,6 +21,14 @@ a {
     background-color: #eeeeee;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 .logo:hover, 
 .logo:focus {
     opacity: 0.8;
@@ -34,16 +42,18 @@ a {
     list-style: none;
 }
 
-.main-menu-item a,
-.cart {
-    color: #000000;
-}
-
 .main-menu-item a:hover,
 .main-menu-item a:focus,
 .cart:hover,
 .cart:focus {
     color: #fb565a;
+}
+
+.main-menu-item a,
+.cart,
+.main-menu-item-active a:hover, 
+.main-menu-item-active a:focus {
+    color: #000000;
 }
 
 .main-menu-item a:active,
@@ -53,11 +63,6 @@ a {
 
 .main-menu-item-active a {
     border-bottom: #000000;
-}
-
-.main-menu-item-active a:hover,
-.main-menu-item-active a:focus {
-    color: #000000;
 }
 
 .service-list {
@@ -75,16 +80,12 @@ a {
 
 .service-item p {
     color: #283136;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
 }
 
 .button {
     color: #ffffff;
     width: 160px;
     height: 50px;
-    font-size: 16px;
     line-height: 18px;
     font-weight: 500;
 }
@@ -135,7 +136,8 @@ a {
     list-style: none;
 }
 
-.catalog-item:hover {
+.catalog-item:hover
+.catalog-item:focus {
     box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
 }
 
@@ -159,9 +161,27 @@ a {
 
 .catalog-item p {
     color: #666666;
-    font-size: inherit;
-    font-weight: inherit;
     line-height: 18px;
+}
+
+.aside h3,
+.features h3{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.aside-title {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+.aside-text {
+    color: #283136;
+}
+
+.features-list {
+    list-style: none;
 }
 
 .main-footer {
@@ -181,8 +201,6 @@ a {
 
 .footer-text {
     color: #444444;
-    font-size: inherit;
-    font-weight: inherit;
     line-height: 22px;
 }
 
@@ -194,6 +212,7 @@ a {
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
+    text-transform: uppercase;
 }
 
 .filter ul {
@@ -201,8 +220,9 @@ a {
     line-height: 20px;
 }
 
-.filter-input {
+.filter-input + label{
     color: #283136;
+    line-height: 20px;
 }
 
 .filter-input:disabled + label {
@@ -212,9 +232,9 @@ a {
 .button-filter {
     background-color: #eeeeee;
     color: inherit;
-    font-size: inherit;
     width: 260px;
     height: 50px;
+    text-transform: uppercase;
 }
 
 .button-filter:hover,
