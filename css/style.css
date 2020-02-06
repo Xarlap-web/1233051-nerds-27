@@ -3,16 +3,18 @@ body {
     padding: 0;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
     color: #000000;
     background-color: #ffffff;
     }
+
 a {
     text-decoration: none;
 }
 
-.main-navigation {
-    font-size: 16px;
+.main-header {
+    font-size: inherit;
     line-height: 30px;
     font-weight: 500;
     text-transform: uppercase;
@@ -20,8 +22,7 @@ a {
 }
 
 .logo:hover, 
-.logo:focus
-{
+.logo:focus {
     opacity: 0.8;
 }
 
@@ -33,37 +34,30 @@ a {
     list-style: none;
 }
 
-.main-menu a {
-    color: #000000;
-}
-
-.main-menu a:hover,
-.main-menu a:focus
-{
-    color: #fb565a;
-}
-
-.main-menu a:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.main-item-active {
-    color: #000000;
-    text-decoration: underline;
-}
-
+.main-menu-item a,
 .cart {
     color: #000000;
 }
 
+.main-menu-item a:hover,
+.main-menu-item a:focus,
 .cart:hover,
-.cart:focus
-{
+.cart:focus {
     color: #fb565a;
 }
 
+.main-menu-item a:active,
 .cart:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.main-menu-item-active a {
+    border-bottom: #000000;
+}
+
+.main-menu-item-active a:hover,
+.main-menu-item-active a:focus {
+    color: #000000;
 }
 
 .service-list {
@@ -81,61 +75,90 @@ a {
 
 .service-item p {
     color: #283136;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
 }
-.button { /* Задал размеры кнопок, а они не увеличились */
+
+.button {
     color: #ffffff;
     width: 160px;
     height: 50px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
 }
 
-.button.red {
+.button-red {
     background-color: #fb565a;
 }
 
-.button.red:hover,
-.button.red:focus {
+.button-red:hover,
+.button-red:focus {
     background-color: #e74246;
 }
 
-.button.red:active {
+.button-red:active {
     background-color: #d7373b;
     color: rgba(255, 255, 255, 0.3);
 }
 
-.button.green {
+.button-green {
     background-color: #00ca74;
 }
 
-.button.green:hover,
-.button.green:focus {
+.button-green:hover,
+.button-green:focus {
     background-color: #00bc6c;
 }
 
-.button.green:active {
+.button-green:active {
     background-color: #00aa62;
     color: rgba(255, 255, 255, 0.3);
 }
 
-.button.yellow {
+.button-yellow {
     background-color: #efc84a;
 }
 
-.button.yellow:hover,
-.button.yellow:focus {
+.button-yellow:hover,
+.button-yellow:focus {
     background-color: #eab534;
 }
 
-.button.yellow:active {
+.button-yellow:active {
     background-color: #e5a722;
     color: rgba(255, 255, 255, 0.3);
 }
 
+.catalog-item h3,
+.catalog-item a {
+    color: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.catalog-item h3:hover,
+.catalog-item h3:focus{
+    color: #fb565a;
+}
+
+.catalog-item h3:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item p {
+    color: #666666;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 18px;
+}
+
 .main-footer {
     background-color: #ffffff;
-    color: #000000;
+    color: inherit;
 }
 
 .footer-social {
@@ -150,7 +173,61 @@ a {
 
 .footer-text {
     color: #444444;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: inherit;
+    font-weight: inherit;
     line-height: 22px;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.filter ul {
+    list-style: none;
+    line-height: 20px;
+}
+
+.filter-input {
+    color: #283136;
+}
+
+.filter-input:disabled + label {
+    color: rgba(40, 49, 54, 0.3);
+}
+
+.button-filter {
+    background-color: #eeeeee;
+    color: inherit;
+    font-size: inherit;
+    width: 260px;
+    height: 50px;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+    background-color: #dfdfdf;
+}
+
+.button-filter:active {
+    background-color: #d5d5d5;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.button-item {
+    background-color: #fb565a;
+}
+
+.button-item:hover,
+.button-item:focus {
+    background-color: #e74246;
+}
+
+.button-item:active {
+    background-color: #d7373b;
 }
