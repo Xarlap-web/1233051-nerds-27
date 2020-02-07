@@ -136,7 +136,7 @@ a {
     list-style: none;
 }
 
-.catalog-item:hover
+.catalog-item:hover,
 .catalog-item:focus {
     box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
 }
