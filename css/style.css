@@ -38,7 +38,7 @@ a {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .logo a:hover, 
@@ -60,7 +60,8 @@ a {
 .main-menu {
     list-style: none;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
+    align-items: center;    
 }
 
 .main-menu-item a:hover,
@@ -177,17 +178,43 @@ a.button {
     color: rgba(255, 255, 255, 0.3);
 }
 
+.filter-catalog {
+    display: flex;
+    justify-content: space-around;
+}
+
+.catalog {
+    width: 760px;
+    min-height: 1914px;
+}
+
 .catalog-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
 }
+
+.catalog-item {
+    width: 360px;
+    min-height: 576px;
+    margin-bottom: 33px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.catalog-item:nth-child(2n) {
+    margin-right: 0;
+  }
 
 .catalog-item:hover,
 .catalog-item:focus {
     box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
 }
 
-.catalog-item h3,
-.catalog-item a {
+.item-name a {
     color: inherit;
     font-size: 18px;
     font-weight: 700;
@@ -217,23 +244,29 @@ a.button {
 
 .features-list
 {
-    display: flex;
-    flex-direction: row;
     width: 343px;
-    height: 95px;
-    justify-content: space-between;
-
+    background-color: #00aa62;
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .features-list dt {
     font-size: 45px;
     font-weight: 700;
     line-height: 10.06px;
+    width: 93px;
+    min-height: 35px;
+    background-color: #d5d5d5;
+    border: 2px solid #eab534;
 }
 
 .features-list dd{
     color: #283136;
     line-height: 18px;
+    background-color: #ca0303;
+    border: 2px solid #eab534;
 }
 
 .section-title {
@@ -248,6 +281,13 @@ a.button {
 
 .section-list {
     list-style: none;
+}
+
+.pagination {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: 50px;
 }
 
 .main-footer {
@@ -270,6 +310,11 @@ a.button {
 .footer-text {
     color: #444444;
     line-height: 22px;
+}
+
+.filter {
+    width: 261px;
+    min-height: 508px;
 }
 
 .filter fieldset {
@@ -317,6 +362,7 @@ a.button {
 
 .button-item {
     background-color: #fb565a;
+    color: #ffffff;
 }
 
 .button-item:hover,
