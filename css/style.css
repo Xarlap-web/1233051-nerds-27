@@ -180,7 +180,6 @@ a.button {
 
 .filter-catalog {
     display: flex;
-    justify-content: space-around;
 }
 
 .catalog {
@@ -242,14 +241,19 @@ a.button {
     text-transform: uppercase;
 }
 
-.features-list
-{
+.features-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 49px;
+}
+
+.features-list {
     width: 343px;
     background-color: #00aa62;
     border: 2px solid yellow;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .features-list dt {
@@ -267,6 +271,8 @@ a.button {
     line-height: 18px;
     background-color: #ca0303;
     border: 2px solid #eab534;
+    margin: 0;
+    padding: 0;
 }
 
 .section-title {
@@ -288,6 +294,8 @@ a.button {
     padding: 0;
     list-style: none;
     min-height: 50px;
+    display: flex;
+    margin-bottom: 60px;
 }
 
 .main-footer {
@@ -299,22 +307,31 @@ a.button {
 
 .footer-social {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-title {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
 }
 
 .footer-text {
     color: #444444;
     line-height: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 .filter {
     width: 261px;
     min-height: 508px;
+    margin: 0;
+    padding: 0;
 }
 
 .filter fieldset {
