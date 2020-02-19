@@ -1,3 +1,4 @@
+/* --------------Общие стили-----------------*/
 body {
     margin: 0;
     padding: 0;
@@ -21,6 +22,13 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+/* --------------Header-----------------*/
 .main-header {
     font-size: inherit;
     line-height: 30px;
@@ -40,7 +48,7 @@ a {
     margin: 0;
     padding: 0; 
 }
-
+/* --------------Шапка, меню-----------------*/
 .logo a:hover, 
 .logo a:focus {
     opacity: 0.8;
@@ -57,11 +65,25 @@ a {
     border: 2px solid red;
 }
 
+.menu-logo-cart {
+    margin-top: 50px;
+    margin-left: 45px;
+    height: 250px;
+    background-color: #eeeeee;
+}
+
 .main-menu {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;    
+}
+
+.cart-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .main-menu-item a:hover,
@@ -87,8 +109,26 @@ a {
     border-bottom: #000000;
 }
 
+.main-menu a,
+.cart a {
+    display: block;
+    padding: 10px 15px;
+}
+
+/* --------------Услуги-главная-----------------*/
 .service-list {
     list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.service-item {
+    width: 300px;
+    margin-left: 45px;
+    margin-top: 125px;
+    margin-bottom: 55px;
+    margin-right: 40px;
 }
 
 .service-item h3 {
@@ -103,9 +143,8 @@ a {
     color: #283136;
 }
 
-.container .service-list {
+.service-list {
     display: flex;
-    justify-content: space-between;
 /* Временные стили ниже - потом удалить! */
     background-color: salmon;
     border: 2px solid red;
@@ -119,21 +158,17 @@ a {
     border: 2px solid red;
 }
 
+/* --------------Кнопки-----------------*/
 .button {
+    display: block;
     color: #ffffff;
     width: 160px;
-    height: 50px;
+    padding: 16px 0 16px 0;
     line-height: 18px;
     font-weight: 500;
-}
-
-a.button {
-    display: table-cell;
-    height: 50px;
-    width: 160px;
-    text-align: center;
-    vertical-align: middle;
+    border-radius: 4px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .button-red {
@@ -178,9 +213,46 @@ a.button {
     color: rgba(255, 255, 255, 0.3);
 }
 
+.button-filter {
+    background-color: #eeeeee;
+    color: inherit;
+    width: 260px;
+    height: 50px;
+    text-transform: uppercase;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+    background-color: #dfdfdf;
+}
+
+.button-filter:active {
+    background-color: #d5d5d5;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.button-item {
+    background-color: #fb565a;
+    color: #ffffff;
+    width: 200px;
+    margin-left: 23%;
+}
+
+.button-item:hover,
+.button-item:focus {
+    background-color: #e74246;
+}
+
+.button-item:active {
+    background-color: #d7373b;
+}
+
 .filter-catalog {
     display: flex;
+    justify-content: space-between;
 }
+
+/* --------------Каталог-----------------*/
 
 .catalog {
     width: 760px;
@@ -245,12 +317,10 @@ a.button {
     margin: 0;
     padding: 0;
     margin-bottom: 49px;
+    margin-top: 41px;
 }
 
 .features-list {
-    width: 343px;
-    background-color: #00aa62;
-    border: 2px solid yellow;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -262,15 +332,12 @@ a.button {
     line-height: 10.06px;
     width: 93px;
     min-height: 35px;
-    background-color: #d5d5d5;
-    border: 2px solid #eab534;
+
 }
 
 .features-list dd{
     color: #283136;
     line-height: 18px;
-    background-color: #ca0303;
-    border: 2px solid #eab534;
     margin: 0;
     padding: 0;
 }
@@ -298,17 +365,22 @@ a.button {
     margin-bottom: 60px;
 }
 
-.main-footer {
+/* --------------Footer-----------------*/
+.main-footer .container {
     background-color: #ffffff;
     color: inherit;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .footer-social {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    margin-left: 143px;
+}
+
+.footer-list {
+    margin-left: 139px;
 }
 
 .footer-title {
@@ -327,11 +399,17 @@ a.button {
     padding: 0;
 }
 
+/* --------------Фильтр-----------------*/
 .filter {
     width: 261px;
     min-height: 508px;
     margin: 0;
     padding: 0;
+}
+
+.filter-list {
+    padding: 0;
+    margin: 0;
 }
 
 .filter fieldset {
@@ -359,34 +437,3 @@ a.button {
     color: rgba(40, 49, 54, 0.3);
 }
 
-.button-filter {
-    background-color: #eeeeee;
-    color: inherit;
-    width: 260px;
-    height: 50px;
-    text-transform: uppercase;
-}
-
-.button-filter:hover,
-.button-filter:focus {
-    background-color: #dfdfdf;
-}
-
-.button-filter:active {
-    background-color: #d5d5d5;
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.button-item {
-    background-color: #fb565a;
-    color: #ffffff;
-}
-
-.button-item:hover,
-.button-item:focus {
-    background-color: #e74246;
-}
-
-.button-item:active {
-    background-color: #d7373b;
-}

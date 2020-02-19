@@ -14,25 +14,29 @@
 
   <header class="main-header">
     <div class="container">
-      <nav>
-        <div class="logo">
-          <a href="index.html">
-          <img src="img/nerds-logo.svg" alt="Логотип проекта Нёрдс" title="Нёрдс" width="160" height="65">
-          </a>
-        </div>
-        <ul class="main-menu">
-          <li class="main-menu-item"><a href="#">Студия</a></li>
-          <li class="main-menu-item"><a href="#">Клиенты</a></li>
-          <li class="main-menu-item main-menu-item-active"><a>Магазин</a></li>
-          <li class="main-menu-item"><a href="#">Контакты</a></li>
-        </ul>
-        <a class="cart" href="#">Корзина</a>
-      </nav>
+      <div class="menu-logo-cart">
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+            <img src="img/nerds-logo.svg" alt="Логотип проекта Нёрдс" title="Нёрдс" width="160" height="65">
+            </a>
+          </div>
+          <ul class="main-menu">
+            <li class="main-menu-item"><a href="#">Студия</a></li>
+            <li class="main-menu-item"><a href="#">Клиенты</a></li>
+            <li class="main-menu-item main-menu-item-active"><a>Магазин</a></li>
+            <li class="main-menu-item"><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="cart-menu">
+            <li><a class="cart" href="#">Корзина</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <h1>Магазин готовых шаблонов</h1>
+    <h1 class="title-catalog">Магазин готовых шаблонов</h1>
   <div class="filter-catalog">
     <section>
       <h2 class="visually-hidden">Фильтр шаблонов по стоимости</h2>
@@ -40,7 +44,7 @@
           <fieldset>
             
             <legend>Сетка:</legend>
-              <ul>
+              <ul class="filter-list">
                 <li>
                     <input class="filter-input" type="radio" name="template-type" id="filter-adaptive" value="adaptive" checked>
                     <label for="filter-adaptive">Адаптивная</label>
@@ -60,7 +64,7 @@
             
             <legend>Особенности:</legend>
             
-            <ul>
+            <ul class="filter-list">
               <li>
                   <input class="filter-input" type="checkbox" name="slider" id="filter-slider" checked>
                   <label for="filter-slider">Слайдер</label>
@@ -175,20 +179,24 @@
         </ul>
     </section>
     </div>
+    <section class="container">
+      <img src="img/map-cat.png" alt="Компания Нёрдс на карте">
+    </section>
     </main>
 
-    <footer class="main-footer">
+      <footer class="main-footer">
+        <section class="container">
         <ul class="footer-social">
           <li><a href="#">ВК</a></li>
           <li><a href="#">FB</a></li>
           <li><a href="#">Instagram</a></li>
         </ul>
-        <div>
+        <div class="footer-list">
           <p class="footer-title">Давайте дружить, это выгодно!</p>
           <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
         </div>
+        </section>
       </footer>
-
     <section>
         <h2>Напишите нам</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
