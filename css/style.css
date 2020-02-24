@@ -164,14 +164,11 @@ a {
 .service-item {
     width: 300px;
     margin-right: 100px;
+    margin-bottom: 55px;
 }
 
 .service-item:nth-child(3n) {
     margin-right: 0;
-}
-
-.service-item:nth-last-child(1n) {
-    margin-bottom: 50px;
 }
 
 .service-item h3 {
