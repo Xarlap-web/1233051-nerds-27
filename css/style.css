@@ -56,6 +56,10 @@ img {
     padding: 0; 
 }
 /* --------------Шапка, меню-----------------*/
+.logo {
+    margin-right: 100px;
+}
+
 .logo a:hover, 
 .logo a:focus {
     opacity: 0.8;
@@ -81,7 +85,12 @@ img {
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: center;    
+    flex-wrap: wrap;
+    align-items: center;   
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+    padding-left: 7px;
 }
 
 .cart-menu {
@@ -89,6 +98,10 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0;
+    margin: 0;
+    padding-left: 41px;
+    padding-top: 6px;
 }
 
 .cart {
@@ -107,6 +120,14 @@ img {
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.3;
+}
+
+.main-menu-item {
+    margin-right: 47px;
+}
+
+.main-menu-item:last-child {
+    margin-right: 0;
 }
 
 .main-menu-item a:hover,
@@ -130,12 +151,6 @@ img {
 
 .main-menu-item-active a {
     border-bottom: #000000;
-}
-
-.main-menu a,
-.cart a {
-    display: block;
-    padding: 10px 15px;
 }
 
 /* --------------Footer-----------------*/
