@@ -56,9 +56,6 @@ img {
     padding: 0; 
 }
 /* --------------Шапка, меню-----------------*/
-.logo {
-    margin-right: 100px;
-}
 
 .logo a:hover, 
 .logo a:focus {
@@ -193,7 +190,7 @@ img {
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
-    padding-top: 75px;
+    padding-top: 83px;
     border-bottom: 2px solid #eeeeee;
 }
 
@@ -531,3 +528,16 @@ img {
     color: rgba(40, 49, 54, 0.3);
 }
 
+/* --------------Модальные окна-----------------*/
+
+.modal {
+    box-sizing: border-box;
+    width: 960px;
+    background-color: #ffffff;
+    padding: 0px 100px;
+    position: relative;
+    bottom: 180px;
+    left: 50%;
+    margin-left: -480px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75);
+}
