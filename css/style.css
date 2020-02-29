@@ -56,9 +56,6 @@ img {
     padding: 0; 
 }
 /* --------------Шапка, меню-----------------*/
-.logo {
-    margin-right: 100px;
-}
 
 .logo a:hover, 
 .logo a:focus {
@@ -193,7 +190,7 @@ img {
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
-    padding-top: 75px;
+    padding-top: 83px;
     border-bottom: 2px solid #eeeeee;
 }
 
