@@ -484,12 +484,18 @@ img {
     background-color: #d7373b;
 }
 
+.button-modal {
+    font-weight: 400;
+    width: 260px;
+    margin-bottom: 54px;
+}
+
+/* --------------Фильтр-----------------*/
 .filter-catalog {
     display: flex;
     justify-content: space-between;
 }
 
-/* --------------Фильтр-----------------*/
 .filter {
     width: 261px;
     min-height: 508px;
@@ -534,10 +540,77 @@ img {
     box-sizing: border-box;
     width: 960px;
     background-color: #ffffff;
-    padding: 0px 100px;
+    padding: 30px 100px;
     position: relative;
-    bottom: 180px;
+    bottom: 207px; /* bottom сделать 180пикс */
     left: 50%;
     margin-left: -480px;
     box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75);
+}
+
+.modal-close {
+    width: 23px;
+    height: 23px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 13%;
+    right: 88px;
+    background-image: url("../img/close-cross.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #ffffff;
+    opacity: 0.3;
+}
+
+.modal h2 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 36px;
+    margin-bottom: 38px;
+}
+
+.feedback p {
+    margin: 0;
+}
+
+.feedback input {
+    box-sizing: border-box;
+    border: 2px solid #d7dcde;
+    border-radius: 2px;
+}
+
+.feedback input::-webkit-input-placeholder { 
+    color: rgba( 68, 68, 68, 0.502 );
+}  
+
+.feedback label {
+    font-weight: 700;
+}
+
+.feedback input[name="name"],
+.feedback input[type="email"] {
+    width: 360px;
+    padding: 14px 13px;
+    line-height: 18px;
+    margin-right: 40px;
+    margin-top: 6px;
+    margin-bottom: 31px;
+}
+
+.feedback input[name="email"] {
+    margin-right: 0;
+}
+
+.feedback .text-mail {
+    width: 100%;
+    padding: 10px 0px 85px 13px;
+    margin-top: 7px;
+    margin-bottom: 47px;
+}
+
+.feedback-username-email {
+    display: flex;
 }
