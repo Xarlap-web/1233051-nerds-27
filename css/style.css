@@ -19,12 +19,15 @@ body {
 }
 
 .visually-hidden {
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-}    
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
 
 a {
     text-decoration: none;
@@ -160,6 +163,40 @@ img {
 .footer-social {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 260px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-button {
+    width: 79px;
+    height: 79px;
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #e74246;
+    color: #ffffff;
+}
+
+.social-button:active {
+    background-color: #d7373b;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #ffffff;
+}
+
+.social-button:active path {
+    fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-list {
@@ -419,7 +456,6 @@ img {
 
 .button-red:active {
     background-color: #d7373b;
-    color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green {
@@ -588,6 +624,8 @@ img {
 
 .feedback label {
     font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
 }
 
 .feedback input[name="name"],
@@ -596,7 +634,6 @@ img {
     padding: 14px 13px;
     line-height: 18px;
     margin-right: 40px;
-    margin-top: 6px;
     margin-bottom: 31px;
 }
 
@@ -607,7 +644,6 @@ img {
 .feedback .text-mail {
     width: 100%;
     padding: 10px 0px 85px 13px;
-    margin-top: 7px;
     margin-bottom: 47px;
 }
 
