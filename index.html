@@ -99,7 +99,20 @@
           </dl>
       </section>
       </div>
+
+      <section class="container partners">
+        <ul class="partners-list">
+          <li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1.png" alt="Логотип Html Academy"></a></li>
+          <li class="partners-item"><a href="#"><img src="img/logo-2.png" alt="Логотип Barbershop Borodinski"></a></li>
+          <li class="partners-item"><a href="#"><img src="img/logo-3.png" alt="Логотип Pink"></a></li>
+          <li class="partners-item"><a href="#"><img src="img/logo-4.png" alt="Логотип Mishka"></a></li>
+        </ul>
+      </section>
   </main>
+
+  <section>
+    <button class="modal-link" type="button">Напишите нам</button>
+  </section>
   
   <footer class="main-footer">
     <section class="container">
@@ -169,6 +182,64 @@
     </button>
   </section>
 
+  <script>
+      var link = document.querySelector(".modal-link");
+
+      var popup = document.querySelector(".modal");
+      var close = popup.querySelector(".modal-close");
+      var form = popup.querySelector("form");
+      var name = popup.querySelector("[name=name]");
+      var email = popup.querySelector("[name=email]");
+
+      var isStorageSupport = true;
+      var storage = "";
+      
+      try {
+        storage = localStorage.getItem("name");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+
+        if (storage) {
+      name.value = storage;
+        }
+
+        name.focus();
+      });
+
+    close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    popup.classList.add("modal-error");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!name.value || !email.value) {
+    evt.preventDefault();
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    console.log("Нужно ввести имя и почту");
+    }
+    if (isStorageSupport) {
+        localStorage.setItem("name", name.value);
+      }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      popup.classList.add("modal-error");
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        popup.classList.add("modal-error");
+      }
+    }
+  });
+  </script>
 </body>
 
 </html>
