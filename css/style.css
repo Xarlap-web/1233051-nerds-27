@@ -298,8 +298,13 @@ img {
     opacity: 0.1;
 }
 
-.main-map-img {
-    text-align: center;
+.main-map-item {
+    width: 100%;
+    min-height: 420px;
+    background-image: url("D:/HtmlAcademy/1233051-nerds-27/img/map.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* --------------Каталог-----------------*/
