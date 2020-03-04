@@ -271,7 +271,11 @@ img {
     border-bottom: 2px solid #eeeeee;
 }
 
-/* --------------Парнеры- главная-----------------*/
+/* --------------Парнеры и карта- главная-----------------*/
+
+.partners {
+    border-bottom: 2px solid #eeeeee;
+}
 
 .partners-list {
     list-style: none;
@@ -292,6 +296,10 @@ img {
 
 .partners-item:active {
     opacity: 0.1;
+}
+
+.main-map-img {
+    text-align: center;
 }
 
 /* --------------Каталог-----------------*/
