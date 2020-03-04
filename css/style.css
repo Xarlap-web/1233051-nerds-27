@@ -158,6 +158,10 @@ img {
     background-color: #ffffff;
     color: inherit;
     display: flex;
+    align-items: center;
+    position: absolute;
+    left: 140px;
+    margin-bottom: 80px;
 }
 
 .footer-social {
@@ -168,6 +172,10 @@ img {
     width: 260px;
     padding: 0;
     margin: 0;
+}
+
+.footer-list {
+    padding-left: 139px;
 }
 
 .social-button {
@@ -197,10 +205,6 @@ img {
 
 .social-button:active path {
     fill: rgba(255, 255, 255, 0.3);
-}
-
-.footer-list {
-    margin-left: 139px;
 }
 
 .footer-title {
@@ -298,13 +302,52 @@ img {
     opacity: 0.1;
 }
 
-.main-map-item {
-    width: 100%;
-    min-height: 420px;
-    background-image: url("D:/HtmlAcademy/1233051-nerds-27/img/map.jpg");
+.main-map {
+    /*width: 100%;
+    background-image: url("../img/map.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 68px;
+}
+
+.main-map-contacts {
+    box-sizing: border-box;
+    width: 320px;
+    min-height: 308px;
+    background-color: #ffffff;
+    z-index: 1;
+    position: absolute;
+    left: 140px;
+    padding: 0 50px;
+}
+
+.main-map-contacts .main-map-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 700;
+    margin: 0;
+    padding-top: 50px;
+    margin-bottom: 22px;
+}
+
+.main-map-contacts p {
+    line-height: 18px;
+    color: #666666;
+}
+
+.main-map-adress {
+    margin-bottom: 19px;
+}
+
+.main-map-tel {
+    margin-bottom: 38px;
 }
 
 /* --------------Каталог-----------------*/
@@ -560,6 +603,12 @@ img {
     font-weight: 400;
     width: 260px;
     margin-bottom: 54px;
+}
+
+.modal-link {
+    width: 220px;
+    background-color: #fb565a;
+    margin-bottom: 10px;
 }
 
 /* --------------Фильтр-----------------*/
