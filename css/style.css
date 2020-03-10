@@ -724,7 +724,7 @@ img {
     border-radius: 2px;
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
     left: -40px;
@@ -736,6 +736,7 @@ img {
     width: 26px;
     height: 26px;
 }
+
 /* --------------Модальные окна-----------------*/
 
 @keyframes bounce {
