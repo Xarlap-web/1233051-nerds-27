@@ -43,12 +43,29 @@
     <section>
       <h2 class="visually-hidden">Фильтр шаблонов по стоимости</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-item">
+            <legend>Стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+              </div>
+            </div>
+            </fieldset>
+
           <fieldset>
             
             <legend>Сетка:</legend>
               <ul class="filter-list">
                 <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="template-type" id="filter-adaptive" value="adaptive" checked disabled>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="template-type" id="filter-adaptive" value="adaptive" checked>
                     <label for="filter-adaptive">Адаптивная</label>
                 </li>
                 <li class="filter-option">
@@ -56,7 +73,7 @@
                     <label for="filter-fixed">Фиксированная</label>
                 </li>
                 <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="template-type" id="filter-fluid" value="fluid" disabled>
+                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="template-type" id="filter-fluid" value="fluid">
                     <label for="filter-fluid">Резиновая</label>
                 </li>
               </ul>
@@ -73,12 +90,12 @@
               </li>
 
               <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantages" id="filter-advantages" disabled>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantages" id="filter-advantages">
                   <label for="filter-advantages">Блок преимуществ</label>
               </li>
 
               <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked disabled>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
                   <label for="filter-news">Новости</label>
               </li>
 
