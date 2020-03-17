@@ -71,9 +71,94 @@ img {
 
 .main-slider {
 /* Временные стили - потом удалить! */
-    height: 413px;
+    min-height: 413px;
     background-color: #eeeeee;
-    border: 2px solid rgb(0, 0, 0);
+    /*border: 2px solid rgb(0, 0, 0); */
+    min-width: 1160px;
+    background-image: url("../img/slide1.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    text-align: left;
+    position: relative;
+
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.main-slider::before,
+.main-slider::after {
+  content: "";
+  visibility: hidden;
+}
+
+.main-slider::before {
+  background-image: url("../img/slide2.png");
+}
+
+.main-slider::after {
+  background-image: url("../img/slide3.png");
+}
+
+
+.slider-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide-title {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.slide-description {
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 90px;
+    right: 50%;
+    z-index: 20;
+    font-size: 0;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin-right: 17px;
+    vertical-align: bottom;
+    background-color: transparent;
+    border: 18px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#product-1:checked ~ .main-slider {
+    background-image: url("../img/slide1.png");
+}
+  
+  #product-2:checked ~ .main-slider {
+    background-image: url("../img/slide2.png");
+}
+  
+  #product-3:checked ~ .main-slider {
+    background-image: url("../img/slide3.png");
+}
+
+#product-1:checked ~ .main-slider #slide1,
+#product-2:checked ~ .main-slider #slide2,
+#product-3:checked ~ .main-slider #slide3 {
+  display: block;
 }
 
 .main-header .container {
@@ -652,6 +737,20 @@ img {
     font-weight: 400;
     width: 260px;
     margin-bottom: 54px;
+}
+
+.button-slide {
+    background-color: #fb565a;
+    width: 240px;
+}
+
+.button-slide:hover {
+    background-color: #e74246;
+}
+
+.button-slide:active {
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-link {
