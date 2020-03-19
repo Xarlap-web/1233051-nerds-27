@@ -31,14 +31,23 @@
   </header>
 
   <main>
-    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-    <section class="main-slider">
+
+   
+
+    <section class="main-slider">      
+
       <div class="container">
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+        <div class="slider-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
+        </div>
         <ul class="slider-list">
           
-          <li class="slider-item slide-show" id="slide1">
+          <li class="slider-item" id="slide1">
             <div class="slider-text">
               <p class="slide-title">Долго, дорого,<br>скрупулезно.</p>
               <p class="slide-description">Математически выверенный дизайн<br> 
@@ -48,7 +57,7 @@
             <img src="./img/slide1.png" width="760" height="431" alt="картинка мобильного приложения">
           </li>
           
-          <li class="slider-item slide-hidden" id="slide2">
+          <li class="slider-item" id="slide2">
             <div class="slider-text">
               <p class="slide-title">Любим математику<br>
                 как никто другой</p>
@@ -58,7 +67,7 @@
             <img src="./img/slide2.png" width="760" height="431" alt="картинка математических формул">
           </li>
           
-          <li class="slider-item slide-hidden" id="slide3">
+          <li class="slider-item" id="slide3">
             <div class="slider-text">
               <p class="slide-title">Только ночь,<br>
                 только хардкор</p>
@@ -69,11 +78,7 @@
           </li>
         
         </ul>
-        <div class="slider-controls">
-          <label for="product-1">Первый</label>
-          <label for="product-2">Второй</label>
-          <label for="product-3">Третий</label>
-        </div>
+        
       </div>
     </section>
     <h1 class="visually-hidden">Дизайн студия Нёрдс</h1>
@@ -166,8 +171,8 @@
       <li class="social-button">
         <a href="#">
           <span class="visually-hidden">ВК</span>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="26px" height="15px" viewBox="0 0 26 15" enable-background="new 0 0 26 15" xml:space="preserve">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0"
+          width="26" height="15" viewBox="0 0 26 15" enable-background="new 0 0 26 15" xml:space="preserve">
         <path fill="#FFFFFF" d="M16.138,11.51c0.956-0.309,2.18,2.04,3.483,2.939c0.978,0.681,1.727,0.534,1.727,0.534l3.473-0.05
          c0,0,1.815-0.112,0.957-1.554c-0.071-0.12-0.503-1.069-2.585-3.022c-2.177-2.043-1.882-1.712,0.739-5.244
          c1.597-2.153,2.236-3.468,2.036-4.028c-0.192-0.539-1.365-0.399-1.365-0.399L20.69,0.713c-0.381,0.001-0.704,0.119-0.851,0.515
@@ -210,7 +215,7 @@
     <div class="feedback-username-email">
     <p>
     <label for="write-username">Ваше имя:</label>
-    <input type="text" name="name" id="write-username" placeholder="Имя Фамилия">
+    <input type="text" name="login" id="write-username" placeholder="Имя Фамилия">
     </p>
     <p>
     <label for="write-email">Ваш e-mail:</label>
@@ -221,8 +226,8 @@
     <label for="write-text">Текст письма:</label>
     <input class="text-mail" type="text" name="text" id="write-text" placeholder="В свободной форме">
     </p>
-    </form>
     <button class="button button-red button-modal" type="submit">Отправить</button>
+    </form>
     <button class="modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
@@ -233,15 +238,15 @@
 
       var popup = document.querySelector(".modal");
       var close = popup.querySelector(".modal-close");
-      var form = popup.querySelector("form");
-      var name = popup.querySelector("[name=name]");
+      var form = popup.querySelector(".form");
+      var login = popup.querySelector("[name=login]");
       var email = popup.querySelector("[name=email]");
 
       var isStorageSupport = true;
       var storage = "";
       
       try {
-        storage = localStorage.getItem("name");
+        storage = localStorage.getItem("login");
       } catch (err) {
         isStorageSupport = false;
       }
@@ -251,10 +256,10 @@
         popup.classList.add("modal-show");
 
         if (storage) {
-      name.value = storage;
+          login.value = storage;
         }
 
-        name.focus();
+        login.focus;
       });
 
     close.addEventListener("click", function (evt) {
@@ -264,14 +269,14 @@
     });
 
     form.addEventListener("submit", function (evt) {
-      if (!name.value || !email.value) {
+      if (!login.value || !email.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     console.log("Нужно ввести имя и почту");
     }
     if (isStorageSupport) {
-        localStorage.setItem("name", name.value);
+        localStorage.setItem("login", login.value);
       }
     });
 
