@@ -229,6 +229,7 @@ img {
 
 .main-menu-item {
     margin-right: 47px;
+    position: relative;
 }
 
 .main-menu-item:last-child {
@@ -247,6 +248,15 @@ img {
 .main-menu-item-active a:hover, 
 .main-menu-item-active a:focus {
     color: #000000;
+}
+
+.current::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 74px;
+    height: 2px;
+    background-color: #fb565a;
 }
 
 .main-menu-item a:active,
@@ -491,6 +501,19 @@ img {
     margin: 0;
     padding: 0;
     opacity: 1;
+}
+
+.sort-img a path {
+    fill: rgba(51, 51, 51, 0.2);
+}
+
+.sort-img a:hover path,
+.sort-img a:focus path {
+    fill: #a6a6a6;
+}
+
+.sort-img a:active path {
+    fill: #231f20;
 }
 
 .title-catalog {
