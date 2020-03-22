@@ -120,14 +120,16 @@
 
         <div class="catalog-sort">
           <h3 class="sort-title">Сортировать:</h3>
-          <p>По цене</p>
-          <p>По типу</p>
-          <p>По названию</p>
+          <div class="sort-list">
+            <p class="sort-item"><a class="sort-item-active" href="#">По цене</a></p>
+            <p class="sort-item"><a href="#">По типу</a></p>
+            <p class="sort-item"><a href="#">По названию</a></p>
+          </div>
             <div class="sort-img">  
-              <a href="#">
+              <a class="sort-img-down" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="#a6a6a6" > <path d="M5.5 10L0 0h11"/></svg>
               </a>
-              <a href="#">
+              <a class="sort-img-up" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="#a6a6a6"> <path d="M5.5 0L0 10h11z"/> </svg>
                </a> 
             </div>
@@ -214,12 +216,21 @@
         </ul>
     </section>
     </div>
-    <section class="container">
-      <img src="img/map-cat.png" alt="Компания Нёрдс на карте">
-    </section>
+
     </main>
 
     <footer class="main-footer">
+
+      <section class="main-map">
+        <div class="main-map-contacts">
+          <p class="main-map-title">Nёrds design studio</p>
+          <p class="main-map-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+          <p class="main-map-tel">тел. +7 (812) 275-75-75</p>
+          <button class="button modal-link" type="button">Напишите нам</button>
+        </div>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ee0e4b33c9172184863a4626f2bad3836f4e19f0247ec1db2531ff0129cdf&amp;source=constructor" width="100%" height="420px" frameborder="0"></iframe>
+    </section>
+
       <section class="container">
       <ul class="footer-social">
         <li class="social-button">
