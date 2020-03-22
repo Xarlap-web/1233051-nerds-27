@@ -582,8 +582,8 @@ body {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.sort-item:hover,
-.sort-item:focus {
+.sort-item a:hover,
+.sort-item a:focus {
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -891,20 +891,32 @@ body {
 
 .pagination-item {
     margin-right: 5px;
+    position: relative;
 }
 
 .pagination-item a {
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #eeeeee;
     color: #000000;
     text-decoration: none;
 }
 
+.pagination-item a:hover,
+.pagination-item a:focus {
+    background-color: #dfdfdf;
+}
+
 .pagination-item a:active {
+    background-color: #d5d5d5;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item-active::before {
+    content: "";
+    position: absolute;
+    border: 3px solid #eeeeee;
     background-color: #ffffff;
-    color: #000000;
-    border: 3px solid #eeeeee
 }
 
 /* --------------Кнопки-----------------*/
@@ -1416,6 +1428,16 @@ body {
     background-color: #ffffff;
     opacity: 0.3;
 }
+
+.modal-close:hover,
+.modal-close:focus {
+    opacity: 1;
+}
+
+.modal-close:active {
+    opacity: 0.1;
+}
+
 
 .modal h2 {
     font-size: 45px;
