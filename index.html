@@ -33,7 +33,7 @@
   <main>
 
     <section class="main-slider">      
-
+      <h2 class="visually-hidden">Слайдер компании Нёрдс</h2>
       <div class="container">
         <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
         <input class="visually-hidden" type="radio" id="product-2" name="toggle">
@@ -149,6 +149,7 @@
       </div>
 
       <section class="container partners">
+        <h2 class="visually-hidden">Список партнеров компании Нёрдс</h2>
         <ul class="partners-list">
           <li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1.png" alt="Логотип Html Academy"></a></li>
           <li class="partners-item"><a href="#"><img src="img/logo-2.png" alt="Логотип Barbershop Borodinski"></a></li>
@@ -163,16 +164,20 @@
   <footer class="main-footer">
     
     <section class="main-map">
+      <div class="container">
+      <h2 class="visually-hidden">Компания Нёрдс на карте</h2>
       <div class="main-map-contacts">
         <p class="main-map-title">Nёrds design studio</p>
         <p class="main-map-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
         <p class="main-map-tel">тел. +7 (812) 275-75-75</p>
         <button class="button modal-link" type="button">Напишите нам</button>
       </div>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ee0e4b33c9172184863a4626f2bad3836f4e19f0247ec1db2531ff0129cdf&amp;source=constructor" width="100%" height="420px" frameborder="0"></iframe>
-  </section>
+      </div>
+      <iframe class="map-yandex" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ee0e4b33c9172184863a4626f2bad3836f4e19f0247ec1db2531ff0129cdf&amp;source=constructor"></iframe>
+    </section>
   
-    <section class="container">
+    <section class="footer-bar container">
+      <h2 class="visually-hidden">Социальные сети Нёрдс</h2>
     <ul class="footer-social">
       <li class="social-button">
         <a href="#">
@@ -239,64 +244,8 @@
     </button>
   </section>
 
-  <script>
-      var link = document.querySelector(".modal-link");
+  <script src="js/modal.js"></script>
 
-      var popup = document.querySelector(".modal");
-      var close = popup.querySelector(".modal-close");
-      var form = popup.querySelector(".form");
-      var login = popup.querySelector("[name=login]");
-      var email = popup.querySelector("[name=email]");
-
-      var isStorageSupport = true;
-      var storage = "";
-      
-      try {
-        storage = localStorage.getItem("login");
-      } catch (err) {
-        isStorageSupport = false;
-      }
-
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-
-        if (storage) {
-          login.value = storage;
-        }
-
-        login.focus;
-      });
-
-    close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    popup.classList.add("modal-error");
-    });
-
-    form.addEventListener("submit", function (evt) {
-      if (!login.value || !email.value) {
-    evt.preventDefault();
-    popup.classList.remove("modal-error");
-    popup.offsetWidth = popup.offsetWidth;
-    console.log("Нужно ввести имя и почту");
-    }
-    if (isStorageSupport) {
-        localStorage.setItem("login", login.value);
-      }
-    });
-
-    window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      popup.classList.add("modal-error");
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.add("modal-error");
-      }
-    }
-  });
-  </script>
 </body>
 
 </html>
