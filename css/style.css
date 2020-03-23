@@ -18,6 +18,7 @@ body {
     line-height: 24px;
     color: #000000;
     background-color: #ffffff;
+    position: relative;
 }
 
 .visually-hidden {
@@ -311,6 +312,7 @@ body {
 }
 
 /* --------------Footer-----------------*/
+
 .main-footer .container {
     background-color: #ffffff;
     color: inherit;
@@ -558,12 +560,12 @@ body {
     display: -ms-flexbox;
     display: flex;
     text-transform: uppercase;
-    margin-bottom: 93px;
+    margin-bottom: 89px;
 }
 
 .catalog-sort p {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 30px;
     font-weight: 400;
 }
 
@@ -598,7 +600,7 @@ body {
 
 .sort-title {
     font-size: 18px;
-    line-height: 18px;
+    line-height: 30px;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -645,7 +647,7 @@ body {
 .title-catalog {
     width: 100%;
     background-color: #eeeeee;
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     padding-top: 67px;
     padding-bottom: 110px;
 }
@@ -672,13 +674,13 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: -21px;
 }
 
 .catalog-item {
     width: 360px;
     min-height: 576px;
-    margin-bottom: 68px;
+    margin-bottom: 73px;
     margin-right: 40px;
     text-align: center;
     position: relative;
@@ -699,7 +701,7 @@ body {
 
 .catalog-item:nth-child(2n) {
     margin-right: 0;
-  }
+}
 
 .catalog-item:hover,
 .catalog-item:focus {
@@ -731,6 +733,7 @@ body {
     font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .catalog-item h3:hover,
@@ -761,7 +764,7 @@ body {
 
 .catalog-item .item-info {
     display: none;
-    padding: 29px;
+    padding: 33px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
@@ -878,45 +881,56 @@ body {
     margin-top: 10px;
 }
 
+.pages {
+	margin-bottom: 60px;
+}
+
 .pagination {
-    margin: 0;
+    display: flex;
+	margin: 0;
     padding: 0;
     list-style: none;
-    min-height: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 60px;
 }
 
-.pagination-item {
-    margin-right: 5px;
-    position: relative;
-}
-
-.pagination-item a {
-    padding: 10px 15px;
+.pagination-link {
+    background-color: #eee;
+    border: solid 3px #eee;
+    color: #000;
+    display: block;
+    font-weight: 500;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 25px;
     border-radius: 3px;
-    background-color: #eeeeee;
-    color: #000000;
     text-decoration: none;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus {
-    background-color: #dfdfdf;
+.pagination-link-active {
+	background-color: transparent;
+	border: solid 3px #dbdbdb;
 }
 
-.pagination-item a:active {
-    background-color: #d5d5d5;
-    color: rgba(0, 0, 0, 0.3);
+.pagination-link:focus:not(.pagination-link-active),.pagination-link:hover:not(.pagination-link-active) {
+	background-color: #dfdfdf;
+	border: solid 3px transparent;
 }
 
-.pagination-item-active::before {
-    content: "";
-    position: absolute;
-    border: 3px solid #eeeeee;
-    background-color: #ffffff;
+.pagination-link:active:not(.pagination-link-active) {
+	background-color: #d5d5d5;
+	border: 0;
+	box-shadow: inset 0 3px 0 0 rgba(0,1,1,.1);
+	color: rgba(0,1,1,.1);
+	padding: 15px;
+}
+
+.next {
+	width: 230px;
+}
+
+.pagination-item:not(:first-child) {
+	margin-left: 11px;
 }
 
 /* --------------Кнопки-----------------*/
@@ -1392,13 +1406,14 @@ body {
     width: 960px;
     background-color: #ffffff;
     padding: 30px 100px;
-    position: relative;
-    bottom: 207px; /* bottom сделать 180пикс */
+    position: absolute;
+    bottom: -35px;
     left: 50%;
     margin-left: -480px;
     -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75);
             box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75);
     display: none;
+    z-index: 3;
 }
 
 .modal-show {
@@ -1409,9 +1424,29 @@ body {
             animation: bounce 0.6s;
 }
 
+.modal-error input[type=email],.modal-error input[type=text],.modal-error input {
+	border: solid 2px #e74246;
+	color: #e74246;
+}
+
+input::-moz-placeholder,input::-webkit-input-placeholder,input::-moz-placeholder,input::-webkit-input-placeholder
+{
+	color: rgba(68,68,68,.5);
+}
+
+.full-width input:hover,.half-width input:hover {
+	border: solid 2px #b4b9bb;
+	color: rgba(68,68,68,.5);
+}
+
+.full-width input:focus,.half-width input:focus
+{
+	border: solid 2px #000;
+	color: #444;
+}
+
 .modal-error {
-    -webkit-animation: shake 0.6s;
-            animation: shake 0.6s;
+	animation-name: shake;
 }
 
 .modal-close {
