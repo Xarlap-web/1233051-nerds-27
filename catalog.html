@@ -26,9 +26,7 @@
             <li class="main-menu-item main-menu-item-active"><a class="current" href="#" >Магазин</a></li>
             <li class="main-menu-item"><a href="#">Контакты</a></li>
           </ul>
-          <ul class="cart-menu">
-            <li><a class="cart" href="#">Корзина</a></li>
-          </ul>
+            <a class="cart-menu" href="#">Корзина</a>
         </nav>
     </div>
   </header>
@@ -48,14 +46,14 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="margin-left: 5%; width: 60%"></div>
+                  <div class="bar"></div>
                 </div>
                 <div class="toggle toggle-min"></div>
                 <div class="toggle toggle-max"></div>
               </div>
               <div class="price-controls">
-                <label class="min-price">от <input name="min-price" type="number" value="0"></label>
-                <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+                <label class="min-price">от <input name="min-price" type="number" value="0" aria-label="Минимальная цена"></label>
+                <label class="max-price">до <input name="max-price" type="number" value="15000" aria-label="Максимальная цена"></label>
               </div>
             </div>
             </fieldset>
@@ -112,8 +110,8 @@
             </ul>
               
           </fieldset>
+          <button type="submit" class="button button-filter">Показать</button>
         </form>
-        <button type="submit" class="button button-filter">Показать</button>
     </section>
 
     <section class="catalog">
@@ -126,10 +124,10 @@
             <p class="sort-item"><a href="#">По названию</a></p>
           </div>
             <div class="sort-img">  
-              <a class="sort-img-down" href="#">
+              <a class="sort-img-down" href="#" aria-label="Стрелка сортировки вниз">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="#a6a6a6" > <path d="M5.5 10L0 0h11"/></svg>
               </a>
-              <a class="sort-img-up" href="#">
+              <a class="sort-img-up" href="#" aria-label="Стрелка сортировки вверх">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="#a6a6a6"> <path d="M5.5 0L0 10h11z"/> </svg>
                </a> 
             </div>
@@ -145,7 +143,7 @@
                     <a href="#">Sedona</a>
                   </h3>
                   <p class="item-description">Информационный сайт<br>для туристов</p>
-                    <a class="button button-item">9 900 руб.</a>
+                    <a href="#" class="button button-item">9 900 руб.</a>
                 </div>
             </li>
 
@@ -157,7 +155,7 @@
                     <a href="#">Pink App</a>
                   </h3>
                   <p class="item-description">Продуктовый лендинг<br>приложения для iOS и Android</p>
-                  <a class="button button-item">9 900 руб.</a>
+                  <a href="#" class="button button-item">9 900 руб.</a>
               </div>
             </li>
 
@@ -169,7 +167,7 @@
                     <a href="#">Barbershop</a>
                   </h3>
                     <p class="item-description">Сайт салона красоты.<br>Для мужчин, да.</p>
-                    <a class="button button-item">9 900 руб.</a>
+                    <a href="#" class="button button-item">9 900 руб.</a>
                 </div>
             </li>
 
@@ -181,7 +179,7 @@
                         <a href="#">Mishka</a>
                     </h3>
                     <p class="item-description">Интернет-магазин<br>вязаных игрушек</p>
-                    <a class="button button-item">9 900 руб.</a>
+                    <a href="#" class="button button-item">9 900 руб.</a>
                 </div>
             </li>
 
@@ -192,7 +190,7 @@
                         <a href="#">A Plus</a>
                     </h3>
                     <p class="item-description">Лендинг курсов повышения<br>квалификации</p>
-                    <a class="button button-item">9 900 руб.</a>
+                    <a href="#" class="button button-item">9 900 руб.</a>
                 </div>
             </li>
 
@@ -204,7 +202,7 @@
                         <a href="#">Кваст</a>
                     </h3>
                     <p class="item-description">Промо-сайт производителя<br>крафтового кваса</p>
-                    <a class="button button-item">9 900 руб.</a>
+                    <a href="#" class="button button-item">9 900 руб.</a>
                 </div>
             </li>
         </ul>
@@ -229,8 +227,7 @@
         <div class="main-map-contacts">
           <p class="main-map-title">Nёrds design studio</p>
           <p class="main-map-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-          <p class="main-map-tel">тел. +7 (812) 275-75-75</p>
-          <button class="button modal-link" type="button">Напишите нам</button>
+          <p class="main-map-tel"><a class="tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a></p>   <button class="button modal-link" type="button">Напишите нам</button>
         </div>
         </div>
         <iframe class="map-yandex" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ee0e4b33c9172184863a4626f2bad3836f4e19f0247ec1db2531ff0129cdf&amp;source=constructor"></iframe>
